@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dotCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 80px 120px;
+  cursor: default;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 56px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.shape-picker {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shape-btn {
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.shape-btn:hover {
+  color: #111;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.shape-btn.active {
+  background: #111;
+  color: #fff;
+}

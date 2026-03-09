@@ -30,14 +30,12 @@ npx vercel
 
 Follow the prompts and open the returned URL.
 
-### Option B: GitHub Pages
+### Option B: GitHub Pages (branch `gh-pages`)
 
-1. Push the repo to GitHub (including the `.github/workflows/deploy-pages.yml` file).
-2. In the repo: **Settings** → **Pages**.
-3. Under **Build and deployment**:
-   - **Source**: GitHub Actions.
-4. Push a commit to `main` (or run the workflow from **Actions** → **Deploy to GitHub Pages** → **Run workflow**).
-5. After the workflow finishes, the site will be at:
-   `https://<username>.github.io/Hover-gravity-dot-animation/`
+The repo already has a `gh-pages` branch and a workflow that updates it on every push to `main`.
 
-(Replace `<username>` with your GitHub username.)
+**One-time setup:** In the repo go to **Settings → Pages**. Under **Build and deployment**, set **Source** to **Deploy from a branch**. Choose branch **gh-pages** and folder **/ (root)**. Click **Save**.
+
+Your site will be live at:
+
+**https://odina101.github.io/Hover-gravity-dot-animation/**
